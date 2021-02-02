@@ -1,0 +1,42 @@
+body{
+	margin: 0;
+}
+.main-container{
+	margin-top:0.3rem;
+}
+.upload-button{
+	font-size: 0.34rem;
+    display: block;
+    width: 6rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: #3a9e5c;
+    border-radius: 0.6rem;
+}
+.upload-file{
+	position: absolute;
+	left: 0.2rem;
+	top: 0;
+	width: 6rem;
+	height: 0.6rem;
+	opacity: 0;
+}
+.pic-preview{
+	width: 6.4rem;
+	height: 6.4rem;
+}
+.pic-preview .img{
+	width: 6.4rem;
+	height: 6.4rem;
+}
+.pic-info{
+	font-size: 0.26rem;
+}
+.pic-info p{
+	margin: 0.1rem;
+}

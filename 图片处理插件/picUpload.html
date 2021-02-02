@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>处理上传图片</title>
+    <meta name="keywords" content="处理上传图片" />
+    <meta name="description" content="处理上传图片" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-retina.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <link rel="stylesheet" href="picUpload.css"/>
+    <script>
+    (function() {
+        function refreshRem() {
+            var width = docEl.getBoundingClientRect().width;
+            rem = width / (BASE_WIDTH / ROOT_FONT_SIZE);
+            docEl.style.fontSize = rem + "px";
+        }
+        var tid = null, docEl = document.documentElement, BASE_WIDTH = 640, ROOT_FONT_SIZE = 100;
+        refreshRem();
+        window.addEventListener("resize", function() {
+            clearTimeout(tid);
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+    })();
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main-container">
+        <a href="javascript:void(0);" class="upload-button">
+            上传图片
+            <input type="file" class="upload-file" name="uploadPic" id="uploadPic" accept="image/*" >
+        </a>
+        <div class="pic-info"></div>
+        <div class="pic-preview"></div>
+    </div>
+</div>
+<!--DEV环境-->
+<script type="text/javascript" src="exif.js"></script>
+<script type="text/javascript" src="picUpload.js"></script>
+</body>
+</html>
